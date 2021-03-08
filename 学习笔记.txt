@@ -1,0 +1,67 @@
+react学习笔记：
+1、react中的constructer 和 super 函数 [ 每个组件中都有constructer函数，可写可不写，但写了就必须写super(), 因为子类是没有自己的this对象，它只能继承来自父类的this对象，super()就是将父类的this对象继承给子类。]
+
+2、redux应用
+~ store  store是只读的，改变state的唯一方法就是触发 (dispatch) action
+~ action  Action 描述当前发生的事情。改变 State 的唯一办法，就是使用 Action。它会运送数据到 Store。action中都会带一个type属性。~ ~ dispatch  是View 发出Action的唯一方法。 store.dispatch接受一个 Action 对象作为参数，将它发送出去
+~ reducer 是一个函数，它接受Action和当前Atate作为参数，返回一个新的State。
+~ middleware
+store.subscribe()   Store 允许使用store.subscribe方法设置监听函数，一旦 State 发生变化，就自动执行这个函数。
+
+dva    dva首先是一个基于redux 和 redux-saga 的数据流方案，为了简化开发体验，dva还额外内置了react-router和fetch,可理解为一个轻量级的应用框架。
+model component connect起来
+dispatching function 是一个用于触发 action 的函数，action 是改变 State 的唯一途径，但是它只描述了一个行为，而 dipatch 可以看作是触发这个行为的方式，而 Reducer 则是描述如何改变数据的。
+Dva概念：
+一、数据流向
+二、Models
+      1、state
+      2、Action
+      3、dispatch函数
+      4、Reducer
+      5、Effect 异步操作
+      6、Subscription
+三、Router
+四、Route Components
+
+
+Typescript [Javascript超集]
+1、基础类型：布尔值、数字、字符串、数组、元组Tuple、枚举、Any、Void、Null、Undefined、Never、Object、类型断言
+2、变量声明
+3、接口 interface  
+     ~选属性名字定义的后面加一个?符号
+     ~readonly只读
+    ~一个接口可以继承多个接口
+4、类 class
+    ~ pubilc 默认为public
+    ~private  当成员被标记成 private时，它就不能在声明它的类的外部访问
+    ~protected
+    ~readonly修饰符
+5、函数
+    ~ 参数推断类型
+    ~ 可选参数（？）和默认参数（a="1"）
+    ~ 剩余参数（...restOfName）
+6、泛型
+7、枚举
+8、类型推论
+9、类型兼容性
+10、高级类型
+11、Symbols
+12、迭代器和生成器 
+       for..of VS for...in语句 for...in迭代的是对象的键的列表，for...of迭代对象的键对应的值
+13、模块
+14、命名空间
+15、命名空间和模块
+16、模块解析
+17、声明合并
+18、JSX
+19、装饰器
+20、Mixins
+21、三斜线指令
+22、Javascript文件类型检查
+
+vue.js中的注意点
+1、v-for 中的key的作用：因为vue组件高度复用性，增加key可以标识组件的唯一性，可以更高效的更新虚拟DOM。
+2、vue长列表优化：object.freeze()冻结对象，一单冻结，不可更改
+
+函数防抖：就是指触发事件后在n秒内函数只能执行一次，如果在n秒内又触发了事件，则会重新计算函数执行时间
+函数节流：就是指连续触发事件但是在n秒内只执行一次，会稀释函数的执行频率。

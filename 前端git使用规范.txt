@@ -1,0 +1,58 @@
+前端git常用命令及步骤：
+1、写代码之前先 git pull拉取远程代码
+2、git status  # 查看仓库状态  git diff src 可查看文件中具体修改
+3、git add <some-file> # 缓存一个文件
+4、 git commit -m ""  # 提交文件
+5、git push origin branchName 推送代码到远程分支
+
+git创建tag:
+git tag -a tagName -m "备注信息"
+git push origin tagName  //推送tag到远程
+git push origin --tags  //push所有tag到远程
+git tag -l -n   // -l查看tagName版本号 -n 显示出每个版本号对应的附加说明
+
+
+git branch --contains <commit-id>  工作中会经常碰到一种场景，某个提交先后合并到了各个分支上，但后来发现提交的这个修改是有问题的，需要排查到底哪个分支包含这个提交，然后将其修复掉。
+
+（七）恢复误删的本地分支
+git checkout -b <branch-name> <commit-id>
+
+撤销本地分支合并
+git revert/reset <commit-id>
+从需要提交到远程分支的角度来讲，reset 能够“毁尸灭迹”，不让别人发现我们曾经错误的合并过分支（注：多人协作中，需要谨慎使用）；revert 则会将合并分支和撤回记录一并显示在远程提交记录上。
+
+修改分支名，实现无缝衔接
+git branch -m <oldbranch> <newbranch>
+
+
+新建分支并切换到该分支：git checkout -b branchName
+切换分支：git checkout branchName
+合并别的分支代码：git merge origin/branchName
+删除远程分支 git push origin --delete [branchname]
+使用命令 git remote show origin，可以查看remote地址，远程分支，还有本地分支与之相对应关系等信息。
+此时我们可以看到那些远程仓库已经不存在的分支，根据提示，使用 git remote prune origin 命令：
+
+分支分类:
+master: 存储了正式发布的历史,为主分支(保护分支)，不能直接在master上进行修改代码和提交;
+develop:作为功能的集成分支,开发完成需要提交测试的功能合并到该分支;
+release: 发布分支，主要用于测试或修复bug。
+
+分支管理:
+1. develop为集成开发分支
+    提交规则： 
+    自己分支自测完毕；
+    review通过再合并；
+2. 本地分支管理
+   · 本地分支要做到勤提交，分小功能提交，提交的节点尽可能小；
+   · 本地分支merge到develop分支时，必须先merge develop到本地分支，自测通过再提交；
+3. 注意事项
+   · 开发者相同版本尽量不要修改相同功能，提前划分或协商清楚；
+   · 如果修改代码涉及多人功能，提交完毕请及时告知相关人员更新代码；
+   · 开发者每天更新develop分支内容到本地分支，避免大规模merge;
+
+vscode使用规范：
+1、tab设置两个空格缩进 设置---tab size进行设置
+2、下载eslint插件，写代码按eslint规范，确保代码规范性（提交代码时有个别找不到原因的eslint检查不通过，可关闭eslint检查提交）
+
+git常用命令可参考 http://www.ruanyifeng.com/blog/2015/08/git-use-process.html
+https://www.cnblogs.com/miracle77hp/articles/11163532.html

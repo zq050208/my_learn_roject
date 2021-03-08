@@ -1,0 +1,54 @@
+
+BHR00241256
+
+腾讯企业邮箱账号：zhangshuangyan@tinytiger.cn
+
+腾讯邮箱密码：Zsy123
+
+rimraf node_modules
+
+Git：
+外网访问地址：http://git.titipa.cn/ 
+内网访问地址：http://192.168.1.246:3000/
+
+账号：zhangshuangyan
+密码：zsy123
+
+后台系统登录账号：zhangshuangyan  密码：123456
+
+wiki： 
+http://wiki.tinytiger.cn/
+账号：zhangshuangyan
+密码： 123456
+
+禅道：
+外网地址：http://chandao.titipa.cn/
+内网地址： 192.168.1.251:10089
+账号：zhangshuangyan
+密码：zsy123456
+
+git cherrry-pick 'commit id' 只合并某一个提交的内容到指定分支
+蓝湖注册  https://lanhuapp.com/url/ELWlA-8WEwc
+zhangshuangyan@tinytiger.cn
+zsy123456
+
+DEVELOP: 'http://aladdinapi.titipa.cn/wanpai_admin/public/index.php/',
+
+web_app预发环境地址：http://h5.titipa.cn/web_app/gamesShare/dynamicShare.html
+web_app测试环境地址：http://192.168.1.241/web_app/gamesShare/dynamicShare.html
+
+
+file:///D:/code/web_app/gamesShare/review.html?token=194cd746e7b696e1905d2ab3f84711d1&id=81
+
+web后台预发地址：http://wanpai_admin.titipa.cn/#/login
+
+小虎Hoo运营后台主要是提供给公司内部运营人员，用来为小虎HooAPP配置相关数据，主要涉及到权限，用户设置，内容，货币，商城、游戏设置等等功能。
+小虎礼包后台主要是提供公司产品及相关运营人员，为H5端礼包详情页配置相关数据，主要涉及权限，日志管理，礼包相关数据配置等等功能。
+任务：小虎HooV3.0.0 动态贴发布界面 根据app端参数写一个输入框，
+
+
+KPI指标：代码规范，重要注释 ； git使用规范；禅道使用规范
+加分指标：调优性能、找出项目问题并有可行的解决方案
+减分指标：线上严重性bug，开发中bug率高
+
+
